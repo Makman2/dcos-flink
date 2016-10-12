@@ -1,10 +1,14 @@
 {
-    "assets": {
-        },
-
-    "images": {
-        "icon-small": "TODO",
-        "icon-medium": "TODO",
-        "icon-large": "TODO"
+  "assets": {
+    "container": {
+      "docker": {
+        "flink": "mesosphere/spark:1.0.2-2.0.0" <-- TODO BUILD DOCKER IMAGE
+      }
     }
+  },
+  "images": {
+    "icon-small": "https://downloads.mesosphere.io/spark/assets/icon-service-flink-small.png",
+    "icon-medium": "https://downloads.mesosphere.io/spark/assets/icon-service-flink-medium.png",
+    "icon-large": "https://downloads.mesosphere.io/spark/assets/icon-service-flink-large.png"
+  } <-- TODO UPLOAD IMAGE FILES
 }

@@ -1,0 +1,22 @@
+{
+  # "framework-name"???
+  "id": "{{service.name}}",
+  "cpus": {{service.cpus}},
+  "mem": {{service.mem}}, <-- TODO
+
+  "env": {
+    "DCOS_SERVICE_NAME": "{{service.name}}",
+  }
+
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": ,
+      "network": "HOST", <-- EHH... I DUNNO :O (BRIDGED?)
+      "forcePullImage": true <--- I DUNNO TOO...
+    }
+  }
+
+  # TODO HEALTH CHECKS
+
+}
