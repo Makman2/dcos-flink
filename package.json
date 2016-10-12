@@ -1,0 +1,26 @@
+{
+    "name": "flink",
+    "version": "1.1",
+    "description": "Apache Flink® is an open source platform for distributed stream and batch data processing.",
+    "website": "http://flink.apache.org/",
+    "tags": [
+        "stream processing", [TODO]
+        "batch"
+    ],
+    "scm": "https://github.com/apache/flink",
+    "licenses": [
+        {
+            "name": "Apache License Version 2.0",
+            "url": "https://raw.githubusercontent.com/apache/flink/master/LICENSE"
+        }
+    ],
+
+    "maintainer": "support@mesosphere.io",
+    "packagingVersion": "1.0",
+
+    "selected": TODO,
+    "minDcosReleaseVersion": "1.7", <-- TODO
+
+    "postInstallNotes": "DC/OS Flink is being installed!\n\n\tDocumentation: https://ci.apache.org/projects/flink/flink-docs-release-1.1/",
+    "postUninstallNotes": "The Apache Flink DC/OS Service has be uninstalled and will no longer run.\nPlease follow the instructions at [TODO] to clean up any persisted state."
+}
