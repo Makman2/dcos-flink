@@ -11,8 +11,8 @@
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": ,
-      "network": "HOST", <-- EHH... I DUNNO :O (BRIDGED?)
+      "image": "{{resource.container.docker.flink}}",
+      "network": "HOST",
       "forcePullImage": true <--- I DUNNO TOO...
     }
   }
