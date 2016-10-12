@@ -1,0 +1,18 @@
+{
+  "id": "flink-devel",
+  "cpus": 1,
+  "mem": 1024,
+
+  "env": {
+    "DCOS_SERVICE_NAME": "flink"
+  },
+
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "makman2/flink-mesos-demo:latest",
+      "network": "HOST",
+      "forcePullImage": true
+    }
+  }
+}
