@@ -2,8 +2,9 @@
     "packagingVersion": "3.0",
 
     "name": "flink",
-    "version": "1.1",
+    "version": "1.2",
     "description": "Apache Flink® is an open source platform for distributed stream and batch data processing.",
+    "framework": true,
     "website": "http://flink.apache.org/",
     "tags": [
         "stream processing", [TODO]
@@ -19,8 +20,8 @@
 
     "maintainer": "support@mesosphere.io",
 
-    "selected": TODO,
-    "minDcosReleaseVersion": "1.7", <-- TODO
+    "selected": true, <-- not sure, talk to Jörg :)
+    "minDcosReleaseVersion": "1.8",
 
     "postInstallNotes": "DC/OS Flink is being installed!\n\n\tDocumentation: https://ci.apache.org/projects/flink/flink-docs-release-1.1/",
     "postUninstallNotes": "The Apache Flink DC/OS Service has be uninstalled and will no longer run.\nPlease follow the instructions at [TODO] to clean up any persisted state."

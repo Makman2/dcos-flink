@@ -1,58 +1,68 @@
 {
-    "type": "object",
-    "properties": {
-        "service": {
-            "description": "DCOS Flink configuration properties",
-            "type": "object",
-            "properties": {
-                "name": {
-                    "default": "flink",
-                    "description": "The Spark Dispatcher will register with Mesos with this as a framework name.  This service will be available at http://<dcos_url>/service/<name>/", <-- TODO
-                    "type": "string"
-                },
-                "cpus": {
-                    "default": 1, <-- TODO
-                    "description": "CPU shares",
-                    "minimum": 0.0,
-                    "type": "number"
-                },
-                "mem": {
-                    "default": 1024.0,
-                    "description": "Memory (MB)",
-                    "minimum": 1024.0, <-- TODO
-                    "type": "number"
-                },
-                "role": {
-                    "description": "The Flink Dispatcher will register with Mesos with this role.",
-                    "type": "string",
-                    "default": "*"
-                },
-                "principal": {
-                    "description": "The Flink Dispatcher will register with Mesos with this principal.",
-                    "type": "string",
-                    "default": ""
-                },
-                "secret": {
-                    "description": "The Flink Dispatcher will register with mesos with this secret.",
-                    "type": "string",
-                    "default": ""
-                },
-                "user": {
-                    "description": "Executors will run as this user.",
-                    "type": "string",
-                    "default": "root"
-                },
-                "spark-dist-uri": {
-                    "type": "string",
-                    "description": "Flink distribution URI. The DCOS Flink CLI will fetch this Flink distribution. This variable has no effect on the Flink distribution running the dispatcher or the drivers. The Docker image running this Marathon app contains that distribution.",
-                    "default": "TODO - Missing link"
-                },
-                "log-level": {
-                    "type": "string",
-                    "description": "log4j log level for the Flink Dispatcher. May be set to any valid log4j log level: https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/Level.html",
-                    "default": "INFO"
-                }
-            }
+  "type": "object",
+  "properties": {
+    "service": {
+      "description": "DCOS Flink configuration properties",
+      "type": "object",
+      "properties": {
+        "name": {
+          "default": "flink",
+          "description": "The Spark Dispatcher will register with Mesos with this as framework name. This service will be available at http://<dcos_url>/service/<name>/",
+          "type": "string"
         },
-        "security": {}
+        "cpus": {
+          "default": 1,
+          "description": "CPU shares",
+          "minimum": 1,
+          "type": "number"
+        },
+        "mem": {
+          "default": 1024,
+          "description": "Memory (MB)",
+          "minimum": 1024,
+          "type": "number"
+        },
+        "role": {
+          "description": "The Flink Dispatcher will register with Mesos with this role.",
+          "type": "string",
+          "default": "*"
+        },
+        "principal": {
+          "description": "The Flink Dispatcher will register with Mesos with this principal.",
+          "type": "string",
+          "default": "" <-- CURRENTLY ONLY POSSIBLE via flink-config.yaml
+        },
+        "user": {
+          "description": "Executors will run as this user.",
+          "type": "string",
+          "default": "root"
+        },
+        "session_id": {
+          "description": "Flink session ID.",
+          "type": "string",
+          "default": "default"
+        },
+        "slots": {
+          "description": "A processing slot allows Flink to execute a distributed DataSet transformation, such as a data source or a map-transformation. As a general recommendation, the number of available CPU cores is a good default.",
+          "type": "integer",
+          "default": 1,
+          "minimum": 1
+        },
+        "taskmanager": {
+          "count": {
+            "description": "Number of task managers to spawn.",
+            "type": "integer",
+            "default": 1,
+            "minimum": 1
+          },
+          "memory": {
+            "description": "Memory (MB) for each task manager.",
+            "type": "number",
+            "default": 1024,
+            "minimum": 256
+          }
+        }
+      }
+    }
+  }
 }

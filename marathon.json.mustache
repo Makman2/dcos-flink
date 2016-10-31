@@ -2,10 +2,15 @@
   # "framework-name"???
   "id": "{{service.name}}",
   "cpus": {{service.cpus}},
-  "mem": {{service.mem}}, <-- TODO
+  "mem": {{service.mem}},
 
   "env": {
-    "DCOS_SERVICE_NAME": "{{service.name}}"
+    "DCOS_SERVICE_NAME": "{{service.name}}",
+    "_CLIENT_TM_COUNT": "{{service.taskmanager.count}}",
+    "_CLIENT_TM_MEMORY": "{{service.taskmanager.memory}}",
+    "_SLOTS": "{{service.slots}}",
+    "_CLIENT_USERNAME": "{{service.user}}",
+    "_CLIENT_USERNAME": "{{service.session_id}}",
   },
 
   "container": {
@@ -13,10 +18,22 @@
     "docker": {
       "image": "{{resource.container.docker.flink}}",
       "network": "HOST",
-      "forcePullImage": true <--- I DUNNO TOO...
+      "forcePullImage": true
     }
   }
 
-  # TODO HEALTH CHECKS
+  "healthChecks": [
+    {
+      "protocol": "HTTP",
+      "path": "/",
+      "portIndex": 0,
+      "gracePeriodSeconds": 5,
+      "intervalSeconds": 60,
+      "timeoutSeconds": 10,
+      "maxConsecutiveFailures": 3
+    }
+  ],
+
+
 
 }
