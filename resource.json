@@ -1,12 +1,12 @@
 {
   "container": {
     "docker": {
-      "flink": "makman2/dcos-flink" # <-- TODO Version docker images when hosting on mesosphere^^
+      "flink": "makman2/dcos-flink:v1.0"
     }
   },
   "images": {
-    "icon-small": "https://downloads.mesosphere.io/spark/assets/icon-service-flink-small.png",
-    "icon-medium": "https://downloads.mesosphere.io/spark/assets/icon-service-flink-medium.png",
-    "icon-large": "https://downloads.mesosphere.io/spark/assets/icon-service-flink-large.png"
-  } <-- TODO UPLOAD IMAGE FILES
+    "icon-small": "https://downloads.mesosphere.io/flink/assets/icon-service-flink-small.png",
+    "icon-medium": "https://downloads.mesosphere.io/flink/assets/icon-service-flink-medium.png",
+    "icon-large": "https://downloads.mesosphere.io/flink/assets/icon-service-flink-large.png"
+  }
 }

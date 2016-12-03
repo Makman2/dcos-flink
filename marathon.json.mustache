@@ -1,5 +1,4 @@
 {
-  # "framework-name"???
   "id": "{{service.name}}",
   "cpus": {{service.cpus}},
   "mem": {{service.mem}},
@@ -20,7 +19,7 @@
       "network": "HOST",
       "forcePullImage": true
     }
-  }
+  },
 
   "healthChecks": [
     {
@@ -32,8 +31,5 @@
       "timeoutSeconds": 10,
       "maxConsecutiveFailures": 3
     }
-  ],
-
-
-
+  ]
 }
