@@ -7,7 +7,7 @@
     "framework": true,
     "website": "http://flink.apache.org/",
     "tags": [
-        "stream processing",
+        "stream-processing",
         "batch"
     ],
     "scm": "https://github.com/apache/flink",
