@@ -43,19 +43,17 @@
           "default": 1,
           "minimum": 1
         },
-        "taskmanager": {
-          "count": {
-            "description": "Number of task managers to spawn.",
-            "type": "integer",
-            "default": 1,
-            "minimum": 1
-          },
-          "memory": {
-            "description": "Memory (MB) for each task manager.",
-            "type": "number",
-            "default": 1024,
-            "minimum": 256
-          }
+        "taskmanagers": {
+          "description": "Number of task managers to spawn.",
+          "type": "integer",
+          "default": 1,
+          "minimum": 1
+        },
+        "taskmanager_memory": {
+          "description": "Memory (MB) for each task manager.",
+          "type": "number",
+          "default": 1024,
+          "minimum": 256
         }
       }
     }

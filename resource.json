@@ -7,8 +7,8 @@
     }
   },
   "images": {
-    "icon-small": "https://downloads.mesosphere.io/flink/assets/icon-service-flink-small.png",
-    "icon-medium": "https://downloads.mesosphere.io/flink/assets/icon-service-flink-medium.png",
-    "icon-large": "https://downloads.mesosphere.io/flink/assets/icon-service-flink-large.png"
+    "icon-small": "https://s3.amazonaws.com/downloads.mesosphere.io/universe/assets/icon-service-flink-small.png",
+    "icon-medium": "https://s3.amazonaws.com/downloads.mesosphere.io/universe/assets/icon-service-flink-medium.png",
+    "icon-large": "https://s3.amazonaws.com/downloads.mesosphere.io/universe/assets/icon-service-flink-large.png"
   }
 }
