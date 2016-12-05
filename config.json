@@ -2,7 +2,7 @@
   "type": "object",
   "properties": {
     "service": {
-      "description": "DCOS Flink configuration properties",
+      "description": "DC/OS Flink configuration properties",
       "type": "object",
       "properties": {
         "name": {
