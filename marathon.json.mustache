@@ -20,11 +20,13 @@
     }
   },
 
+  "ports": [0],
+
   "healthChecks": [
     {
       "protocol": "HTTP",
       "path": "/",
-      "port": 8081,
+      "portIndex": 0,
       "gracePeriodSeconds": 5,
       "intervalSeconds": 60,
       "timeoutSeconds": 10,
