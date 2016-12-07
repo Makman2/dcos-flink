@@ -10,13 +10,13 @@
           "description": "The Flink TaskManager will register with Mesos with this as framework name. This service will be available at http://<dcos_url>/service/<name>/",
           "type": "string"
         },
-        "cpus": {
+        "appmaster_cpus": {
           "default": 1,
           "description": "CPU shares",
           "minimum": 0.1,
           "type": "number"
         },
-        "mem": {
+        "appmaster_memory": {
           "default": 1024,
           "description": "Memory (MB)",
           "minimum": 1024,
@@ -54,6 +54,17 @@
           "type": "number",
           "default": 1024,
           "minimum": 256
+        },
+        "taskmanager_memory_preallocate": {
+          "description": "Specify whether TaskManager memory should be allocated when starting up (true) or when memory is required in the memory manager (false).",
+          "type": "boolean",
+          "default": false
+        },
+        "parallelism_default": {
+          "description": "The parallelism used for programs that did not specify any other parallelism.",
+          "type": "number",
+          "default": 1,
+          "minimum": 1
         }
       }
     }
