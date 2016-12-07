@@ -62,7 +62,7 @@
         },
         "parallelism_default": {
           "description": "The parallelism used for programs that did not specify any other parallelism.",
-          "type": "number",
+          "type": "integer",
           "default": 1,
           "minimum": 1
         }
