@@ -12,13 +12,13 @@
         },
         "appmaster_cpus": {
           "default": 1,
-          "description": "CPU shares",
+          "description": "CPU shares of AppMaster.",
           "minimum": 0.1,
           "type": "number"
         },
         "appmaster_memory": {
           "default": 1024,
-          "description": "Memory (MB)",
+          "description": "Memory (MB) of AppMaster.",
           "minimum": 1024,
           "type": "number"
         },
